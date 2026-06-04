@@ -1,0 +1,18 @@
+{
+  "name": "ai-for-science-ai4s-basic",
+  "version": "1.0.0",
+  "description": "AI for Science 通用昇腾 NPU 模型迁移 Skill，适用于将基于 PyTorch、TensorFlow、vLLM 等框架的 CUDA 项目迁移到华为 Ascend NPU，覆盖环境检查、代码分析、自动迁移、手动适配、分布式改造、第三方库替换、验证与专属 skill 沉淀全流程。",
+  "author": "zhouyu",
+  "license": "MIT",
+  "repository": "",
+  "created": "2026-06-04T16:58:26.146363",
+  "skills": [
+    "ai-for-science-ai4s-basic"
+  ],
+  "dependencies": [],
+  "commands": {
+    "ai-for-science-ai4s-basic:help": {
+      "description": "显示 ai-for-science-ai4s-basic 的帮助信息"
+    }
+  }
+}
