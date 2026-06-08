@@ -1,0 +1,27 @@
+{
+  "name": "msmodelslim",
+  "version": "1.0.0",
+  "description": "Model quantization on Ascend NPUs using msmodelslim. End-to-end workflow: quantize → serve → evaluate → analyze. Covers W4A8/W8A8/W4A4 quantization, YAML config authoring, mixed precision for MoE/VLM, sensitive layer analysis, vLLM Ascend serving, and AISBench evaluation.",
+  "author": "starmountain1997",
+  "license": "MIT",
+  "repository": "https://github.com/ascend-ai-coding/awesome-ascend-plugins",
+  "skills": [
+    "msmodelslim"
+  ],
+  "dependencies": [],
+  "keywords": [
+    "quantization",
+    "ascend",
+    "npu",
+    "msmodelslim",
+    "vllm",
+    "aisbench",
+    "w4a8",
+    "w8a8",
+    "w4a4",
+    "inference",
+    "evaluation",
+    "model-compression"
+  ],
+  "category": "ml"
+}
