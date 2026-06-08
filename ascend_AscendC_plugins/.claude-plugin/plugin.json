@@ -22,7 +22,7 @@
     "code-review",
     "end-to-end"
   ],
-  "skills": "./skills",
-  "agents": "./agents",
-  "commands": "./commands"
+  "skills": "../skills",
+  "agents": "../agents",
+  "commands": "../commands"
 }
