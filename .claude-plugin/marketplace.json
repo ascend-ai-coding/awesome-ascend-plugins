@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "awesome-ascend-plugins",
+  "version": "1.0.0",
+  "description": "A marketplace of Ascend NPU developer plugins. Includes AscendC Operator Studio, a self-contained closed-loop agent plugin for end-to-end AscendC custom operator development.",
+  "owner": {
+    "name": "Ascend AI Coding"
+  },
+  "plugins": [
+    {
+      "name": "ascendc-operator-studio",
+      "source": "./ascend_AscendC_plugins",
+      "description": "Self-contained, closed-loop agent plugin for end-to-end AscendC custom operator development on Ascend NPU (ascend-kernel / csrc/ops + build.sh + torch_npu). Drives a new operator from a name and a math spec through environment, project init, two-level tiling design, op_host/op_kernel code generation and framework registration, compile/install/debug, PyTorch-style API docs, precision evaluation and root-cause debugging, torch_npu.profiler performance benchmarking, performance optimization, and security code review.",
+      "version": "1.0.0",
+      "category": "ops",
+      "keywords": [
+        "ascend",
+        "ascendc",
+        "operator",
+        "kernel",
+        "npu",
+        "tiling",
+        "code-generation",
+        "precision",
+        "performance",
+        "code-review",
+        "end-to-end"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ascendc-operator-studio",
+  "version": "1.0.0",
+  "description": "Self-contained, closed-loop agent plugin for end-to-end AscendC custom operator development on Ascend NPU (ascend-kernel / csrc/ops + build.sh + torch_npu). Drives a new operator from a name and a math spec through environment, project init, two-level tiling design, op_host/op_kernel code generation and framework registration, compile/install/debug, PyTorch-style API docs, precision evaluation and root-cause debugging, torch_npu.profiler performance benchmarking, performance optimization, and security code review. Bundles the orchestrator agent, a kickoff command, and the full self-contained ascendc skill (references, templates, scripts, examples).",
+  "author": {
+    "name": "Ascend AI Coding"
+  },
+  "keywords": [
+    "ascend",
+    "ascendc",
+    "operator",
+    "kernel",
+    "npu",
+    "ascend-kernel",
+    "op_host",
+    "op_kernel",
+    "tiling",
+    "code-generation",
+    "precision",
+    "performance",
+    "profiler",
+    "code-review",
+    "end-to-end"
+  ],
+  "skills": "./skills",
+  "agents": "./agents",
+  "commands": "./commands"
+}
