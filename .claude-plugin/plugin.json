@@ -1,0 +1,24 @@
+{
+  "name": "msmodelslim",
+  "description": "Ascend NPU complete toolchain — NPU hardware check, model download, msmodelslim quantization (W4A8/W8A8/W4A4), vLLM serving, and AISBench evaluation. End-to-end workflow: quantize → serve → evaluate → analyze.",
+  "version": "v0.0.3",
+  "author": {
+    "name": "starmountain1997"
+  },
+  "keywords": [
+    "quantization",
+    "ascend",
+    "npu",
+    "msmodelslim",
+    "vllm",
+    "aisbench",
+    "w4a8",
+    "w8a8",
+    "inference",
+    "evaluation"
+  ],
+  "category": "ml",
+  "skills": [
+    "./skills/msmodelslim"
+  ]
+}
