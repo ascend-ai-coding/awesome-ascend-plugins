@@ -1,58 +1,16 @@
 {
-  "description": "Ascend NPU migration agent hooks — injects migration rules on session start and validates code changes post-edit. INSTALL NOTE: The install.sh script reads this file and merges entries into ~/.claude/settings.json with absolute paths. The ${CLAUDE_PLUGIN_ROOT} placeholder below is replaced at install time.",
+  "description": "Ascend NPU migration agent hooks - injects migration context on session start",
   "hooks": {
     "SessionStart": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/session-start.sh",
-            "timeout": 30
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/post-edit.sh",
-            "timeout": 15
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"--- Ascend NPU Migration Context ---\\n\\nYou have the ascend-migration-torchnpu-agent plugin active.\\nWhen performing model migration tasks, remember:\\n\\n  Mandatory Principles:\\n  1. Follow 5-step workflow: Analysis → CPU Baseline → NPU Migration → Verification → Report\\n  2. Never skip steps — each step depends on the previous one\\n  3. Verify on CPU first before NPU migration\\n  4. Use official docs at hiascend.com for latest version info\\n  5. Never fabricate data — all results must come from actual execution\\n  6. Prioritize mirrors — use ModelScope/HF-mirror, not HuggingFace directly\\n\\n  Available Skills:\\n  - migration-ascend-torchnpu-skills                        — overall workflow\\n  - migration-ascend-torchnpu-skills-migration-execution    — code changes & interface replacement\\n  - migration-ascend-torchnpu-skills-environment-setup      — Docker/CANN/torch_npu installation\\n  - migration-ascend-torchnpu-skills-torch-npu-reference    — API compatibility lookup\\n  - migration-ascend-torchnpu-skills-troubleshooting        — error diagnosis\\n\\n  Key Device Mappings:\\n    cuda→npu  |  nccl→hccl  |  DataParallel→DDP  |  cudnn→delete\\n    torch.cuda.amp → torch.npu.amp\\n\\n  Trigger: /ascend-migration-torchnpu-agent\\n  Or say: \\\"migrate this model to run on Ascend NPU\\\"\"}}'",
+            "timeout": 5
           }
         ]
       }
     ]
-  },
-  "manual_setup": {
-    "description": "If install.sh cannot be used, manually add these entries to ~/.claude/settings.json under the 'hooks' key. Replace {PLUGIN_ROOT} with the absolute path to this plugin's directory.",
-    "settings_snippet": {
-      "hooks": {
-        "SessionStart": [
-          {
-            "hooks": [
-              {
-                "type": "command",
-                "command": "{PLUGIN_ROOT}/scripts/session-start.sh",
-                "timeout": 30
-              }
-            ]
-          }
-        ],
-        "PostToolUse": [
-          {
-            "matcher": "Write|Edit",
-            "hooks": [
-              {
-                "type": "command",
-                "command": "{PLUGIN_ROOT}/scripts/post-edit.sh",
-                "timeout": 15
-              }
-            ]
-          }
-        ]
-      }
-    }
   }
 }
