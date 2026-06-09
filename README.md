@@ -15,22 +15,10 @@
 
 ### 第一步：添加 Marketplace
 
-在 Claude Code 交互会话中执行：
-
-```shell
-/plugin marketplace add ascend-ai-coding/awesome-ascend-plugins
-```
-
-也可使用完整 GitHub 地址：
+使用完整 GitHub 地址：
 
 ```shell
 /plugin marketplace add https://github.com/ascend-ai-coding/awesome-ascend-plugins
-```
-
-或在终端直接使用 CLI：
-
-```shell
-claude plugin marketplace add ascend-ai-coding/awesome-ascend-plugins
 ```
 
 添加成功后，可通过 `/plugin` 进入插件管理界面，在 **Discover** 标签页浏览本 marketplace 下的全部插件。
@@ -58,24 +46,6 @@ claude plugin install ascendc-operator-studio@awesome-ascend-plugins
 ```
 
 安装完成后，建议执行 `/reload-plugins` 重新加载插件。
-
-### 团队共享（可选）
-
-若希望团队成员打开项目时自动识别本 marketplace，可在项目 `.claude/settings.json` 中加入：
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "awesome-ascend-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "ascend-ai-coding/awesome-ascend-plugins"
-      }
-    }
-  }
-}
-```
-
 更多 marketplace 用法见 [Claude Code 官方文档](https://code.claude.com/docs/en/discover-plugins)。
 
 ## 插件模块
