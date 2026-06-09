@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "awesome-ascend-plugins",
   "version": "1.0.0",
-  "description": "A marketplace of Ascend NPU developer plugins. Includes AscendC Operator Studio, a self-contained closed-loop agent plugin for end-to-end AscendC custom operator development.",
+  "description": "A marketplace of Ascend NPU developer plugins covering AscendC operator development, model migration, quantization, profiling analysis, and AI for Science workflows.",
   "owner": {
     "name": "Ascend AI Coding"
   },
@@ -25,6 +25,109 @@
         "performance",
         "code-review",
         "end-to-end"
+      ]
+    },
+    {
+      "name": "example-plugin",
+      "source": "./example-plugin",
+      "description": "A comprehensive example plugin demonstrating all Claude Code extension options including commands, agents, skills, hooks, and MCP servers.",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": [
+        "example",
+        "plugin",
+        "skills",
+        "agents",
+        "hooks",
+        "mcp",
+        "commands"
+      ]
+    },
+    {
+      "name": "profiling-analysis",
+      "source": "./profiling-analysis-plugin",
+      "description": "Ascend NPU profiling collection, analysis, and memory profiling for vLLM serving. Provides profiling analysis, remote collection, batch sweep, HBM memory profiling, and local memory analysis workflows.",
+      "version": "0.1.0",
+      "category": "profiling",
+      "keywords": [
+        "ascend",
+        "npu",
+        "profiling",
+        "torch-profiler",
+        "vllm",
+        "memory",
+        "performance",
+        "analysis"
+      ]
+    },
+    {
+      "name": "msmodelslim",
+      "source": "./msmodelslim",
+      "description": "Model quantization on Ascend NPUs using msmodelslim. End-to-end workflow: quantize → serve → evaluate → analyze. Covers W4A8/W8A8/W4A4 quantization, YAML config authoring, mixed precision for MoE/VLM, sensitive layer analysis, vLLM Ascend serving, and AISBench evaluation.",
+      "version": "1.0.0",
+      "category": "ml",
+      "keywords": [
+        "quantization",
+        "ascend",
+        "npu",
+        "msmodelslim",
+        "vllm",
+        "aisbench",
+        "w4a8",
+        "w8a8",
+        "w4a4",
+        "inference",
+        "evaluation",
+        "model-compression"
+      ]
+    },
+    {
+      "name": "ai-for-science-ai4s-basic",
+      "source": "./AI4S-basic",
+      "description": "AI for Science general Ascend NPU model migration skill for moving PyTorch, TensorFlow, and vLLM CUDA projects to Huawei Ascend NPU. Covers environment checks, code analysis, automated migration, manual adaptation, distributed training, third-party library replacement, validation, and custom skill authoring.",
+      "version": "1.0.0",
+      "category": "migration",
+      "keywords": [
+        "ascend",
+        "npu",
+        "migration",
+        "ai4s",
+        "pytorch",
+        "tensorflow",
+        "vllm",
+        "cuda",
+        "distributed"
+      ]
+    },
+    {
+      "name": "ascend-torchnpu-migration-plugin",
+      "source": "./ascend-torchnpu-migration-plugin",
+      "description": "Claude Code plugin for migrating traditional deep learning models (PyTorch) to Huawei Ascend NPU via the torch_npu adaptation layer. Covers environment setup, code migration, precision verification, and report generation.",
+      "version": "1.0.0",
+      "category": "migration",
+      "keywords": [
+        "ascend",
+        "npu",
+        "migration",
+        "torch_npu",
+        "pytorch",
+        "deep-learning"
+      ]
+    },
+    {
+      "name": "ascend-migration-torchnpu-agent",
+      "source": "./ascend-migration-torchnpu-agent",
+      "description": "Claude Code agent plugin for migrating traditional deep learning models from CPU/GPU to Huawei Ascend NPU via torch_npu adaptation layer. Handles environment setup, code migration, interface replacement, debugging, and verification reporting.",
+      "version": "1.0.0",
+      "category": "migration",
+      "keywords": [
+        "ascend",
+        "npu",
+        "migration",
+        "torch_npu",
+        "pytorch",
+        "agent",
+        "verification"
       ]
     }
   ]
